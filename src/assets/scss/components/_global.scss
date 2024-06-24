@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+
+  &.block-scroll {
+    overflow: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  display: block;
+  color: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 120%;
+  color: red;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1496px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1575px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+}
+
+.formfield {
+  position: relative;
+  max-width: 300px;
+}
+
+.main-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 9px 18px;
+  text-align: center;
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:focus {
+    background-color: #cacaca;
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-size: 28px;
+  line-height: 120%;
+  margin: 25px 0;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(33, 33, 33, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.6s;
+  z-index: 500;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
